@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>聖歌隊招待状</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient"></div>
+
+  <main class="wrapper">
+    <section id="step1" class="paper-panel card active" aria-labelledby="title-step1">
+      <div class="paper-edge"></div>
+      <h1 id="title-step1">招待の記録</h1>
+      <p class="lead">あなたの名を記してください</p>
+      <div class="field-wrap">
+        <input type="text" id="name" placeholder="名前" maxlength="24" autocomplete="name" />
+      </div>
+      <button id="startBtn" class="primary-btn">次へ</button>
+    </section>
+
+    <section id="step2" class="paper-panel card hidden" aria-labelledby="title-step2">
+      <div class="paper-edge"></div>
+      <p id="title-step2" class="question">あなたが最後に守りたいものは？</p>
+      <div class="choice-grid">
+        <button data-q="q1" data-val="献身">誰か一人の命</button>
+        <button data-q="q1" data-val="信仰">神への信仰</button>
+        <button data-q="q1" data-val="自我">自分の誇り</button>
+        <button data-q="q1" data-val="空虚">何も守らない</button>
+      </div>
+    </section>
+
+    <section id="step3" class="paper-panel card hidden" aria-labelledby="title-step3">
+      <div class="paper-edge"></div>
+      <p id="title-step3" class="question">あなたの声は誰のためにある？</p>
+      <div class="choice-grid">
+        <button data-q="q2" data-val="救済">誰かを救うため</button>
+        <button data-q="q2" data-val="共鳴">誰かに届くため</button>
+        <button data-q="q2" data-val="虚無">誰にも届かない</button>
+        <button data-q="q2" data-val="自己">自分のため</button>
+      </div>
+    </section>
+
+    <section id="step4" class="paper-panel card hidden" aria-labelledby="title-step4">
+      <div class="paper-edge"></div>
+      <p id="title-step4" class="question">世界の終わりに、あなたは？</p>
+      <div class="choice-grid">
+        <button data-q="q3" data-val="祈り">歌い続ける</button>
+        <button data-q="q3" data-val="愛">誰かのそばにいる</button>
+        <button data-q="q3" data-val="逃避">逃げる</button>
+        <button data-q="q3" data-val="虚無">何もしない</button>
+      </div>
+    </section>
+
+    <section id="revealStage" class="reveal-stage hidden" aria-live="polite">
+      <div class="envelope-shell" id="envelopeShell">
+        <div class="envelope-shadow"></div>
+        <div class="envelope" id="envelope">
+          <div class="wax-seal" id="waxSeal">✠</div>
+          <div class="envelope-back"></div>
+          <div class="envelope-letter-slot"></div>
+          <div class="envelope-flap" id="envelopeFlap"></div>
+          <div class="letter-folded" id="letterFolded">
+            <div class="letter-fold fold-top"></div>
+            <div class="letter-fold fold-body"></div>
+          </div>
+        </div>
+      </div>
+
+      <article id="result" class="paper-panel invitation hidden" aria-labelledby="invitation-heading">
+        <div class="paper-edge"></div>
+        <div class="invitation-header">
+          <p class="crest">✠</p>
+          <h2 id="invitation-heading">聖歌隊入隊許可状</h2>
+          <p class="sub">Santa Angeli Choir</p>
+        </div>
+        <div id="invitationText" class="invitation-text"></div>
+        <div class="cta-wrap">
+          <button id="cta" class="primary-btn">招待に応じる</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
